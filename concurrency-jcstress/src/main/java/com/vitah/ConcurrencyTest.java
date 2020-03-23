@@ -35,6 +35,9 @@ import org.openjdk.jcstress.infra.results.II_Result;
 
 // See jcstress-samples or existing tests for API introduction and testing guidelines
 
+/**
+ * @author vitah
+ */
 @JCStressTest
 // Outline the outcomes here. The default outcome is provided, you need to remove it:
 @Outcome(id = "0, 0", expect = Expect.ACCEPTABLE, desc = "Default outcome.")
@@ -50,5 +53,4 @@ public class ConcurrencyTest {
     public void actor2(II_Result r) {
         // Put the code for second thread here
     }
-
 }
