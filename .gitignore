@@ -24,4 +24,8 @@ hs_err_pid*
 
 .idea/
 *.iml
+
+# jcstress
 target/
+results/
+*.gz
