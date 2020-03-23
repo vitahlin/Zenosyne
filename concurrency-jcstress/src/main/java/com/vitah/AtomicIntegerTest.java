@@ -11,7 +11,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import static org.openjdk.jcstress.annotations.Expect.ACCEPTABLE;
 
 /**
- * 测试int类型的并发情况
+ * 测试AtomicInteger类型的并发情况
  *
  * @author vitah
  */
