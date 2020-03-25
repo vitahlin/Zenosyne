@@ -7,7 +7,6 @@ package com.vitah.islet.concurrency;
  */
 public class ThreadJoin {
     public static final int COUNT = 10000000;
-
     public volatile static int i = 0;
     public volatile static int j = 0;
 
@@ -30,7 +29,6 @@ public class ThreadJoin {
     }
 
     public static void main(String[] args) throws InterruptedException {
-
         Thread t2 = new T2();
         t2.start();
         System.out.println(j);
