@@ -14,6 +14,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * <p>
  * 代码75行，主线程main处于休眠状态，此时两个线程处于死锁。然后在78行，t2线程被中断，
  * 故t2会放弃对lock1的申请，同时释放已获得的lock2。这个操作可以让线程t1顺利得到lock2而继续执行。
+ * 可以看到中断后两个线程都退出，但是真正完成工作的只有t1，t2线程则放弃任务直接退出，释放资源。
  *
  * @author vitah
  */
