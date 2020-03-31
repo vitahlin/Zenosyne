@@ -8,7 +8,7 @@ import java.util.concurrent.locks.ReentrantLock;
  *
  * @author vitah
  */
-public class ReenterLock3 implements Runnable {
+public class TryLock1 implements Runnable {
 
     public static ReentrantLock lock = new ReentrantLock();
 
@@ -33,7 +33,7 @@ public class ReenterLock3 implements Runnable {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        ReenterLock3 lock3 = new ReenterLock3();
+        TryLock1 lock3 = new TryLock1();
         Thread t1 = new Thread(lock3);
         Thread t2 = new Thread(lock3);
         t1.start();
