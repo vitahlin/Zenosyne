@@ -12,10 +12,13 @@ public class ReenterLock3 implements Runnable {
 
     public static ReentrantLock lock = new ReentrantLock();
 
+    private static final int WAIT_TIME = 5;
+
     @Override
     public void run() {
         try {
-            if (lock.tryLock(5, TimeUnit.SECONDS)) {
+            // 线程在这个锁请求中最多等待5秒，超过5秒返回false
+            if (lock.tryLock(WAIT_TIME, TimeUnit.SECONDS)) {
                 Thread.sleep(6000);
             } else {
                 System.out.println("get lock failed");
