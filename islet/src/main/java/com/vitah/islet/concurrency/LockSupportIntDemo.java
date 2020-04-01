@@ -4,10 +4,11 @@ import java.util.concurrent.locks.LockSupport;
 
 /**
  * 线程阻塞工具类：LockSupport
+ * LockSupport还能支持中断影响，但是不会抛出InterruptedException异常，它只会默默返回。
  *
  * @author vitah
  */
-public class LockSupportDemo {
+public class LockSupportIntDemo {
 
     public static Object u = new Object();
 
@@ -22,10 +23,13 @@ public class LockSupportDemo {
         @Override
         public void run() {
             synchronized (u) {
-                System.out.println("in" + getName());
-
+                System.out.println("in " + getName());
+                LockSupport.park();
+                if (Thread.interrupted()) {
+                    System.out.println(getName() + "被中断了");
+                }
             }
-            LockSupport.park();
+            System.out.println(getName() + "执行结束");
         }
 
     }
@@ -34,9 +38,7 @@ public class LockSupportDemo {
         t1.start();
         Thread.sleep(100);
         t2.start();
-        LockSupport.unpark(t1);
+        t1.interrupt();
         LockSupport.unpark(t2);
-        t1.join();
-        t2.join();
     }
 }
