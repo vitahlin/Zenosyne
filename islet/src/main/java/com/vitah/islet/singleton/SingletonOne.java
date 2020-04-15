@@ -18,12 +18,4 @@ public class SingletonOne {
     public static SingletonOne getInstance() {
         return instance;
     }
-
-    public void print() {
-        System.out.print("Hello");
-    }
-
-    public static void main(String[] args) {
-        SingletonOne.getInstance().print();
-    }
 }
