@@ -8,7 +8,7 @@ package com.vitah.islet.concurrency;
 public class CreateThread1 extends Thread {
     @Override
     public void run() {
-        System.out.print("Create thread by extend Thread.");
+        System.out.print("Create thread by extends Thread.");
     }
 
     public static void main(String[] args) {
