@@ -12,6 +12,6 @@ public class CreateThread1 extends Thread {
     }
 
     public static void main(String[] args) {
-        new CreateThread1().run();
+        new CreateThread1().start();
     }
 }

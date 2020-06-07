@@ -8,7 +8,7 @@ package com.vitah.islet.concurrency;
 public class CreateThread implements Runnable {
     @Override
     public void run() {
-        System.out.println("I am Runnable");
+        System.out.println("Create thread by implements Runnable");
     }
 
     public static void main(String[] args) {
