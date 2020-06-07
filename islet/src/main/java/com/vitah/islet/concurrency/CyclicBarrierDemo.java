@@ -31,7 +31,6 @@ public class CyclicBarrierDemo {
             } catch (BrokenBarrierException e) {
                 e.printStackTrace();
             }
-
         }
 
         void doWork() {
@@ -43,7 +42,6 @@ public class CyclicBarrierDemo {
             System.out.println(soldier + "任务完成");
         }
     }
-
 
     public static class BarrierNum implements Runnable {
         boolean flag;
