@@ -25,6 +25,4 @@ public class HashMapDemo {
     public static void main(String[] args) {
         System.out.print(tableSizeFor(10));
     }
-
-
 }
