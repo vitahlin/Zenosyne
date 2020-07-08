@@ -47,7 +47,7 @@ public class DeadThread {
                     e.printStackTrace();
                 }
             }
-        }, "threadA");
+        }, "threadB");
 
         threadA.start();
         threadB.start();
