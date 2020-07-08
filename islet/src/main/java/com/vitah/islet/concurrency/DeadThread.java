@@ -47,7 +47,6 @@ public class DeadThread {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-
             }
         }, "threadA");
 
