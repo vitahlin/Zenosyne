@@ -16,7 +16,8 @@
     <module>islet</module>
           
     <module>concurrency-jcstress</module>
-      
+      <module>design-pattern</module>
+
   </modules>
   
 </project>
