@@ -1,4 +1,4 @@
-package com.vitah.islet.concurrency;
+package com.vitah.islet.concurrent;
 
 /**
  * 产生死锁的示例
