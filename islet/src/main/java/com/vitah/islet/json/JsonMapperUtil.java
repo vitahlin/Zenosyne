@@ -2,7 +2,9 @@ package com.vitah.islet.json;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 
 /**
  * @author vitah
@@ -32,4 +34,15 @@ public class JsonMapperUtil {
         }
     }
 
+    public static <T> JsonNode objToJsonNode(T obj) {
+        return objectMapper.convertValue(obj, JsonNode.class);
+    }
+
+    public static <T> ObjectNode objToObjectNode(T obj) {
+        try {
+            return objectMapper.valueToTree(obj);
+        } catch (ClassCastException e) {
+            return null;
+        }
+    }
 }
