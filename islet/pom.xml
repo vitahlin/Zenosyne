@@ -53,6 +53,11 @@
             <version>RELEASE</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.openjdk.jcstress</groupId>
+            <artifactId>jcstress-core</artifactId>
+            <version>0.5</version>
+        </dependency>
 
     </dependencies>
 </project>
